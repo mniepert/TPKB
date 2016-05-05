@@ -1,0 +1,60 @@
+
+Class TopClass { 
+  subclasses PerPer 0.2, PerOrg 0.2, PerGPE 0.1, OrgOrg 0.3, OrgPer 0.1, OrgGPE 0.1;
+}
+
+Class PerPer {
+	subclasses Children 0.2, Sibling 0.2, Spouse 0.2, Parent 0.2, OtherFamily 0.2;
+	parts s Person, o Person;
+}
+
+Class PerOrg {
+	subclasses EmployeeOrMember 0.5, SchoolsAttended 0.5;
+	parts s Person, o Organization;
+}
+
+Class PerGPE {
+	subclasses PlaceOfBirth 0.5, PlaceOfDeath 0.4, PlaceOfResidence 0.1;
+	parts s Person, o GPE;
+}
+
+Class OrgOrg {
+	subclasses MemberOf 0.25, Members 0.25, Parents 0.25, Subsidiaries 0.25;
+	parts s Organization, o Organization;
+}
+
+Class OrgPer {
+	subclasses FoundedBy 0.3, Shareholders 0.3, TopMembersEmployees 0.4;
+	parts s Organization, o Person;
+}
+
+Class OrgGPE {
+	subclasses PlaceOfHeadquarters 0.25, PlaceOfEnd 0.25, Origin 0.25, PlaceOfRes 0.25;
+	parts s Organization, o GPE;
+}
+
+
+Class Person {
+  subclasses PokerPlayer 0.0008577295179429158, Monarch 0.0028350906967120806, FictionalCharacter 0.019176474901917647, Cleric 0.010322872961746573, Royalty 0.008594318818716576, Philosopher 0.001568793835871165, OfficeHolder 0.03571428571428571, PlayboyPlaymate 0.0012243925179795821, CollegeCoach 0.006902430975690243, Athlete 0.24242448051709958, Architect 0.001553079707298165, Astronaut 0.0008132061536527492, OrganisationMember 0.26787351174107304, Journalist 0.000013095107144166653, Model 0.0018254579358968316, Ambassador 0.0005526135214838328, MilitaryPerson 0.028488405592134555, Judge 0.002143669039500081, Scientist 0.016816736594538816, SoccerManager 0.018140651926814064, Criminal 0.0021606926787874976, Artist 0.079975747861569, Politician 0.03346192728548905, PersonDirect 0.21656033439665612;
+  attributes birthYear ICSV;
+}
+
+Class Organization {
+
+}
+
+Class GPE {
+  subclasses City 0.4, State 0.1, Country 0.5;
+}
+
+Class City {
+
+}
+
+Class State {
+
+}
+
+Class Country {
+
+}
